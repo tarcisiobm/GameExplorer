@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="assets/icon.ico" type="image/x-icon" />
+    <title>Retro Game Explorer</title>
+  </head>
+  <body>
+    <header>
+      <h1>
+        RETRO <br />
+        GAME<br />
+        EXPLORER
+      </h1>
+      <section class="icone">
+        <img src="assets/cogumelo.png" alt="Cogumelo" class="icone-cogumelo" />
+        <img src="assets/poção.png" alt="Poção" class="icone-pocao" />
+        <img src="assets/trofeu.png" alt="Troféu" class="icone-trofeu" />
+        <img src="assets/controle.png" alt="Controle" class="icone-controle" />
+      </section>
+    </header>
+
+    <main>
+      <section class="pesquisa">
+        <input
+          type="text"
+          placeholder="Digite o jogo que deseja buscar"
+          id="campo-pesquisa"
+        />
+        <div>
+          <button onclick="pesquisar()">buscar</button>
+          <button onclick="mostrarTodos()">mostrar todos</button>
+        </div>
+      </section>
+      <section class="resultados-pesquisa" id="resultados-pesquisa"></section>
+    </main>
+    <footer>
+      <p>
+        Projeto - Imersão Alura com Gemini<br />
+        <a href="https://github.com/tarcisiobm" target="_blank"
+          >Criado por Tarcisio</a
+        >
+      </p>
+      <p>tarcisiobm.dev@gmail.com</p>
+      <p>+55 (32)984885764</p>
+    </footer>
+    <script src="dados.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

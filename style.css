@@ -1,0 +1,365 @@
+/* --------------------------------------------------------------
+   RESET
+-------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------
+   FONTES
+-------------------------------------------------------------- */
+@font-face {
+  font-family: "NT Brick Sans";
+  src: url("assets/NTBrickSans.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Anka Coder";
+  src: url("assets/AnkaCoder-b.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "upheavtt";
+  src: url("assets/upheavtt.ttf") format("truetype");
+}
+
+/* --------------------------------------------------------------
+   VARIÁVEIS DE COR E FONTE
+-------------------------------------------------------------- */
+:root {
+  --fonte-primaria: "NT Brick Sans";
+  --fonte-secundaria: "Anka Coder";
+  --fonte-terciaria: "upheavtt";
+
+  --cor-fundo: #0e0e0e;
+  --cor-fundo-input: #141414;
+  --cor-botao: #563556;
+  --cor-botao-hover: #442a44;
+  --cor-texto: #fffffa;
+  --cor-texto-resultado: #acf241;
+}
+
+/* --------------------------------------------------------------
+   ANIMAÇÕES
+-------------------------------------------------------------- */
+@keyframes focusIn {
+  from {
+    filter: blur(10px);
+    opacity: 0;
+  }
+  to {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+@keyframes flutuar {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+/* --------------------------------------------------------------
+   ESTILIZAÇÃO DO CORPO
+-------------------------------------------------------------- */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: var(--cor-fundo);
+  background-image: url(assets/background.png);
+  background-position: top center;
+  background-repeat: no-repeat;
+  font-family: var(--fonte-primaria);
+  color: var(--cor-texto);
+  animation: focusIn 1.5s ease-out;
+}
+
+/* --------------------------------------------------------------
+   ESTILIZAÇÃO DO HEADER
+-------------------------------------------------------------- */
+header {
+  margin: 5rem 0;
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.icone img {
+  position: absolute;
+  width: 6.5rem;
+  animation: flutuar 2s infinite alternate;
+}
+
+.icone-cogumelo {
+  top: 10px;
+  left: -30px;
+}
+
+.icone-pocao {
+  top: 180px;
+  left: -90px;
+}
+
+.icone-trofeu {
+  top: 10px;
+  right: -30px;
+}
+
+.icone-controle {
+  top: 180px;
+  right: -90px;
+}
+
+/* --------------------------------------------------------------
+   ESTILIZAÇÃO DO TÍTULO
+-------------------------------------------------------------- */
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  text-shadow: 1.8px 1.8px 0 #f2c12e, 1.5px 1.5px 0 rgba(0, 0, 0);
+  color: var(--cor-texto);
+  letter-spacing: 0.3rem;
+}
+
+/* --------------------------------------------------------------
+   ESTILIZAÇÃO DA SEÇÃO DE PESQUISA
+-------------------------------------------------------------- */
+.pesquisa {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+  gap: 5px;
+}
+
+section input {
+  width: 25rem;
+  height: 2.5rem;
+  padding: 1rem;
+  border: 1px solid var(--cor-texto);
+  border-radius: 0.2rem;
+  background-color: var(--cor-fundo-input);
+  font-family: var(--fonte-terciaria);
+  font-size: 1rem;
+  color: var(--cor-texto);
+}
+
+section button {
+  height: 2.5rem;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 0.2rem;
+  background-color: var(--cor-botao);
+  font-family: var(--fonte-terciaria);
+  font-size: 1rem;
+  color: var(--cor-texto);
+}
+
+section button:hover {
+  background-color: var(--cor-botao-hover);
+}
+
+/* --------------------------------------------------------------
+   ESTILIZAÇÃO DOS RESULTADOS DA PESQUISA
+-------------------------------------------------------------- */
+.resultados-pesquisa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 0.6rem;
+  overflow-y: auto;
+}
+
+.item-resultado {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 0.6rem;
+  background-color: var(--cor-fundo-input);
+  font-family: var(--fonte-secundaria);
+  color: var(--cor-texto-resultado);
+  gap: 1.25rem;
+}
+
+.imagem-resultado {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 100px;
+  border-radius: 0.5rem;
+}
+
+.imagem-resultado img {
+  max-width: 100%;
+  max-height: 100%;
+  filter: sepia(100%) saturate(200%) hue-rotate(60deg) brightness(90%);
+  object-fit: contain;
+}
+
+.texto-resultado {
+  flex: 5;
+}
+
+.texto-resultado h2 {
+  color: #b1c297;
+  margin: 10px 0;
+}
+
+.texto-resultado p {
+  font-size: 0.8rem;
+  margin: 10px 0;
+}
+
+.texto-resultado a {
+  text-decoration: none;
+  color: var(--cor-texto-resultado);
+}
+
+.texto-resultado a:hover {
+  text-decoration: underline;
+}
+
+/* --------------------------------------------------------------
+   ESTILIZAÇÃO DO FOOTER
+-------------------------------------------------------------- */
+footer {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: auto;
+  background-color: var(--cor-fundo);
+  font-family: var(--fonte-secundaria);
+  font-size: 0.8rem;
+  text-align: center;
+  color: var(--cor-texto);
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--cor-texto);
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* --------------------------------------------------------------
+   MEDIA QUERY PARA TELAS DE ATÉ 768px
+-------------------------------------------------------------- */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+  }
+
+  section input {
+    width: 15rem;
+    padding: 0.7rem;
+    font-size: 0.7rem;
+  }
+
+  section button {
+    height: 2.5rem;
+    width: 7.8rem;
+    font-size: 0.7rem;
+  }
+
+  .resultados-pesquisa {
+    width: 36rem;
+  }
+
+  .item-resultado {
+    width: 34rem;
+  }
+
+  .item-resultado h2 {
+    font-size: 1.3rem;
+  }
+
+  footer {
+    font-size: 0.6rem;
+  }
+}
+
+/* --------------------------------------------------------------
+   MEDIA QUERY PARA TELAS DE ATÉ 500px
+-------------------------------------------------------------- */
+@media (max-width: 500px) {
+  .icone img {
+    width: 4.5rem;
+    animation: flutuar 2s infinite alternate;
+  }
+
+  .icone-cogumelo {
+    top: 5px;
+    left: -30px;
+  }
+
+  .icone-pocao {
+    top: 130px;
+    left: -65px;
+  }
+
+  .icone-trofeu {
+    top: 5px;
+    right: -30px;
+  }
+
+  .icone-controle {
+    top: 130px;
+    right: -65px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .pesquisa {
+    flex-direction: column;
+  }
+
+  .resultados-pesquisa {
+    width: 25rem;
+    font-size: 0.7rem;
+  }
+
+  .item-resultado {
+    width: 20rem;
+  }
+
+  .item-resultado h2 {
+    font-size: 1rem;
+  }
+
+  .item-resultado p {
+    font-size: 0.7rem;
+  }
+
+  footer {
+    display: flex;
+    gap: 0;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 0.5rem;
+  }
+}

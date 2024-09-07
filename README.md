@@ -25,6 +25,3 @@ Você pode executar o Retro Game Explorer diretamente pelos links do: [github](h
 ## Contato
 📧 tarcisiobm.dev@gmail.com  
 📞 +55 (32) 98488-5764
-
----
-Projeto desenvolvido durante a **Imersão Dev Alura com Google Gemni 2024**

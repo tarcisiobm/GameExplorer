@@ -20,7 +20,7 @@ A aplicação permite aos usuários realizar buscas detalhadas para encontrar jo
 - JavaScript 
 
 ## Acesse o projeto
-Você pode executar o Retro Game Explorer diretamente pelos links do: [github](https://tarcisiobm.github.io/GameExplorer-ImersaoAlura/) | [vercel](https://game-explorer-imersao-alura.vercel.app) ou  fazer o clone deste repositório para para executar a aplicação localmente em sua máquina.
+Você pode executar o Retro Game Explorer diretamente pelos links do: [github](https://tarcisiobm.github.io/GameExplorer/) | [vercel](https://game-explorer-imersao-alura.vercel.app/) ou  fazer o clone deste repositório para para executar a aplicação localmente em sua máquina.
 
 ## Como Rodar Localmente
 

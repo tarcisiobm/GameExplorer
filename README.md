@@ -26,11 +26,11 @@ Você pode executar o Retro Game Explorer diretamente pelos links do: [github](h
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/tarcisiobm/GameExplorer-ImersaoAlura.git
+   git clone https://github.com/tarcisiobm/GameExplorer.git
    ```
 2. Navegue até o diretório do projeto:
    ```bash
-   cd GameExplorer-ImersaoAlura
+   cd GameExplorer
    ```
 
 ## Exemplo de Uso
